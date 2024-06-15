@@ -44,6 +44,9 @@ app.put("/api/contact/update/:id", upload.single("image"), updateContactControll
 
 app.use('/api/contact', contactRoutes)
 
+app.get('/', (req, res) => {
+    res.send('API running successfully')
+})
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
